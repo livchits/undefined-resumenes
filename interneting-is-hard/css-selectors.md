@@ -1,4 +1,4 @@
-# CSS Selectors
+# CSS Selectors - Cap. 6 of Interneting Is Hard
 
 “CSS selectors” let us map a single CSS rule to a specific HTML element. This makes it possible to _selectively_ style individual elements while ignoring others.
 
@@ -104,3 +104,49 @@ a:visited:active {
   color: red;
 }
 ```
+## Pseudo-Classes for Buttons
+
+Pseudo-classes can be applied to any kind of selector. For example, to a class for [make a button.](https://internetingishard.com/html-and-css/css-selectors/#pseudo-classes-for-buttons)
+
+## Pseudo-Classes For Structure
+
+There’s also a [bunch of other pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) that provide extra information about an element’s surroundings. For example, the `:last-of-type` pseudo-class selects the final element of a particular type in its parent element.
+```
+p:last-of-type {
+  margin-bottom: 50px;
+}
+```
+The `:first-of-type` and `:last-of-type` selectors only operate inside their parent element. That is to say, `p:first-of-type` selects the first `<p>` in _every_ container element.
+
+## ID Selectors
+
+“ID selectors” are a more stringent alternative to class selectors. They work pretty much the same way, except you can only have _one_ element with the same ID per page, which means you can’t reuse styles at all. Instead of a `class` attribute, they require an `id` attribute on whatever HTML element you’re trying to select. 
+```
+<a id='button-2' class='button' href='nowhere.html'>Button Two</a>
+```
+```
+#button-2 {
+  color: #5D6063;  /* Dark gray */
+}
+```
+### URL Fragments
+
+`id` attributes need to be unique because they serve as the target for “URL fragments”. Fragments are how you point the user to a specific part of a web page.
+```
+<!-- From the same page -->
+<a href='#button-2'>Go to Button Two</a>
+
+<!-- From a different page -->
+<a href='selectors.html#button-2'>Go to Button Two</a>
+```
+
+## CSS Specificity
+
+“CSS specificity” is the weight given to different categories of selectors. This means that certain selectors will _always_ override other ones, regardless of where they appear in the stylesheet.
+
+The specificity of selectors are show below, from greatest to least:
+-   `#button-2`
+-   `.button:link`
+-   `a:link` and `.synopsis em` (they’re equal)
+-   `.button`
+-   `a`
