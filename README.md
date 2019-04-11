@@ -8,6 +8,7 @@ Resúmenes de parte del material de Undefined School, curso de desarrollo web fu
 - [The Box Model](https://internetingishard.com/html-and-css/css-box-model/)
 - [CSS Selectors](https://internetingishard.com/html-and-css/css-selectors/)
 - [Floats](https://internetingishard.com/html-and-css/floats/) 
+- [Flexbox](https://internetingishard.com/html-and-css/flexbox)
 
 ### [Rithm School JavaScript Fundamentals](https://www.rithmschool.com/courses/javascript)
 
