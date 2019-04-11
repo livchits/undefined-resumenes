@@ -49,7 +49,7 @@ Flex containers only know how to position elements that are one level deep (i.e.
 ![Diagram: wrapping two flex items in a <div> to eliminate one of the flex items](https://internetingishard.com/html-and-css/flexbox/grouping-flex-items-1bb642.png)
 ## Cross-Axis (Vertical) Alignment
 
-Flex containers can also define the vertical alignment (cross-axis) of their items. Vertical alignment is defined by adding an `align-items` property to a flex container. The available options are:
+Flex containers can also define the vertical alignment (cross-axis) of their items if the container has an explicit heigth. Vertical alignment is defined by adding an `align-items` property to a flex container. The available options are:
 -   `center`
 -   `flex-start` (top)
 -   `flex-end` (bottom)
@@ -57,3 +57,24 @@ Flex containers can also define the vertical alignment (cross-axis) of their ite
 -   `baseline`
 
 The `stretch` lets you display the background of each element. The box for each item extends the full height of the flex container, regardless of how much content it contains. A common use case for this behavior is creating equal-height columns with a variable amount of content in each one.
+
+##Wrapping Flex Items
+
+Flexbox is a powerful alternative to float-based grids. It can render items as a grid, it can change their alignment, direction, order, and size. To create a grid, we need the flex-wrap property.
+
+`flex-wrap` property forces items that don’t fit to get bumped down to the next row.
+
+##Flex Container Direction
+
+“Direction” refers to whether a container renders its items horizontally or vertically. Horizontal is the default direction: items are drawn one after another in the same row before popping down to the next column when they run out of space.
+
+Flexbox can transform rows into columns using only a single line of CSS. 
+```
+flex-direction: column;
+```
+
+###Alignment Considerations
+
+When you rotate the direction of a container, you also rotate the direction of the justify-content property. It now refers to the container’s vertical alignment—not its horizontal alignment.
+
+![Diagram: axes flipped when flex-direction is equal to column](https://internetingishard.com/html-and-css/flexbox/flex-direction-axes-b30e85.png)
