@@ -58,13 +58,13 @@ Flex containers can also define the vertical alignment (cross-axis) of their ite
 
 The `stretch` lets you display the background of each element. The box for each item extends the full height of the flex container, regardless of how much content it contains. A common use case for this behavior is creating equal-height columns with a variable amount of content in each one.
 
-##Wrapping Flex Items
+## Wrapping Flex Items
 
 Flexbox is a powerful alternative to float-based grids. It can render items as a grid, it can change their alignment, direction, order, and size. To create a grid, we need the flex-wrap property.
 
 `flex-wrap` property forces items that don’t fit to get bumped down to the next row.
 
-##Flex Container Direction
+## Flex Container Direction
 
 “Direction” refers to whether a container renders its items horizontally or vertically. Horizontal is the default direction: items are drawn one after another in the same row before popping down to the next column when they run out of space.
 
@@ -73,7 +73,7 @@ Flexbox can transform rows into columns using only a single line of CSS.
 flex-direction: column;
 ```
 
-###Alignment Considerations
+### Alignment Considerations
 
 When you rotate the direction of a container, you also rotate the direction of the justify-content property. It now refers to the container’s vertical alignment—not its horizontal alignment.
 
